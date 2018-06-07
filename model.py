@@ -75,3 +75,11 @@ def save_fig(fig_id, tight_layout=True, fig_extension="png", resolution=300):
     if tight_layout:
         plt.tight_layout()
     plt.savefig(path, format=fig_extension, dpi=resolution)
+
+
+data = load_credit_card_data()
+
+def test_set_check(identifier, test_ratio, hash):
+    return hash(np.int64(identifier)).digest()[-1] < 256 * test_ratio
+data.head()
+#data.describe()
