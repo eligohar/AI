@@ -83,3 +83,8 @@ def test_set_check(identifier, test_ratio, hash):
     return hash(np.int64(identifier)).digest()[-1] < 256 * test_ratio
 data.head()
 #data.describe()
+# Standardize features by removing the mean and scaling to unit variance
+data.iloc[:, 1:29] = StandardScaler().fit_transform(data.iloc[:, 1:29])
+data.head() #to dispaly only first 5 instances
+data.info()
+data.describe()
