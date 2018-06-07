@@ -88,3 +88,12 @@ data.iloc[:, 1:29] = StandardScaler().fit_transform(data.iloc[:, 1:29])
 data.head() #to dispaly only first 5 instances
 data.info()
 data.describe()
+print("Total Instances in our Credit card Data set:", len(data))
+print("Total instances and total attributes (Input Features): ",data.shape)
+
+### Displaying and generating "Transition_amount_vs_class_type" fig.
+data.plot(kind="scatter", x="Transition Amount", y="Class Type", alpha=0.1)
+save_fig("Transition_amount_vs_class_type")
+data.hist(bins=50, figsize=(30,35))
+save_fig("credit_card_fields")
+plt.show()
