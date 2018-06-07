@@ -59,6 +59,7 @@ def load_credit_card_data(credit_card_path="data"):
     csv_path = os.path.join(credit_card_path, "creditcard.csv")
     return pd.read_csv(csv_path)  ## DataFrame Object Cotaining all the Data...
 
+
 # Import and normalize the data
 #data = pd.read_csv('data/creditcard.csv')
 
@@ -76,7 +77,11 @@ def save_fig(fig_id, tight_layout=True, fig_extension="png", resolution=300):
         plt.tight_layout()
     plt.savefig(path, format=fig_extension, dpi=resolution)
 
-
+    
+def split_train_test_by_id(data, test_ratio, id_column, hash=hashlib.md5):
+    ids = data[id_column]
+    in_test_set = ids.apply(lambda id_: test_set_check(id_, test_ratio, hash))
+    return data.loc[~in_test_set], data.loc[in_test_set]
 data = load_credit_card_data()
 
 def test_set_check(identifier, test_ratio, hash):
