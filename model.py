@@ -36,3 +36,42 @@ from sklearn.utils import compute_class_weight
 from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import classification_report, roc_curve, auc, precision_recall_curve
 import os
+
+# Reproducible random seed
+seed = 1
+
+# Create the output directories, if they don't exist
+try:
+    os.makedirs("logs")
+except OSError:
+    if not os.path.isdir("logs"):
+        raise
+
+try:
+    os.makedirs("figs")
+except OSError:
+    if not os.path.isdir("figs"):
+        raise
+        
+
+        
+def load_credit_card_data(credit_card_path="data"):
+    csv_path = os.path.join(credit_card_path, "creditcard.csv")
+    return pd.read_csv(csv_path)  ## DataFrame Object Cotaining all the Data...
+
+# Import and normalize the data
+#data = pd.read_csv('data/creditcard.csv')
+
+# Where to save the figures
+PROJECT_ROOT_DIR = "."
+CHAPTER_ID = "Credit_Card_images"
+IMAGES_PATH = os.path.join(PROJECT_ROOT_DIR, CHAPTER_ID)
+
+### User Defined Functions Section.....
+# Saving the image at predefined location (Directory)..
+def save_fig(fig_id, tight_layout=True, fig_extension="png", resolution=300):
+    path = os.path.join(IMAGES_PATH, fig_id + "." + fig_extension)
+    print("Saving figure", fig_id)
+    if tight_layout:
+        plt.tight_layout()
+    plt.savefig(path, format=fig_extension, dpi=resolution)
