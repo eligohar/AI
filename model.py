@@ -24,6 +24,8 @@ from __future__ import print_function
 %matplotlib inline 
 import matplotlib
 import matplotlib.pyplot as plt
+import hashlib
+
 from sklearn.preprocessing import Imputer
 #matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -82,6 +84,7 @@ def split_train_test_by_id(data, test_ratio, id_column, hash=hashlib.md5):
     ids = data[id_column]
     in_test_set = ids.apply(lambda id_: test_set_check(id_, test_ratio, hash))
     return data.loc[~in_test_set], data.loc[in_test_set]
+
 data = load_credit_card_data()
 
 def test_set_check(identifier, test_ratio, hash):
