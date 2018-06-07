@@ -97,3 +97,24 @@ save_fig("Transition_amount_vs_class_type")
 data.hist(bins=50, figsize=(30,35))
 save_fig("credit_card_fields")
 plt.show()
+
+### Discover and Visualize the training Data to Gain Insights (Deep Analysis of training data set)
+
+data.plot(kind="scatter", x="Elapsed Time", y="Transition Amount", alpha=0.1)
+plt.show()
+#save_fig("V20_vs_ElapsedTime")
+
+#print(card_data.shape)
+#print(card_data.info())
+#card_data.head()
+
+# Task-1: Data Cleaning (filling out the missing values)....
+imputer = Imputer(strategy="median") # to replace each attribute’s missing values with the median of that attribute
+imputer.fit(data) # fit the imputer instance to the training data (card_data_features)
+print(imputer.statistics_)
+
+# transform the training set by replacing missing values by the learned medians
+X = imputer.transform(data)
+#print(X)
+data_tr = pd.DataFrame(X, columns=data.columns) ## want to put it (plain Numpy array) back into a Pandas DataFrame, 
+print(data_tr)
