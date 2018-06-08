@@ -125,4 +125,36 @@ print(imputer.statistics_)
 X = imputer.transform(data)
 #print(X)
 data_tr = pd.DataFrame(X, columns=data.columns) ## want to put it (plain Numpy array) back into a Pandas DataFrame, 
-print(data_tr)
+
+
+
+# Convert the data frame to its Numpy-array representation
+data_matrix = data.as_matrix()
+X = data_matrix[:, 1:29]
+Y = data_matrix[:, 30]
+
+# Estimate class weights since the dataset is unbalanced
+class_weights = dict(zip([0, 1], compute_class_weight('balanced', [0, 1], Y)))
+
+
+## Splitting the Data Set into training and Test data set...
+# Credit Card dataset does not have an identifier column, so we simply use row index as ID...
+card_data_with_id = data.reset_index() # adds an `index` column for identifier.
+start_train_set, start_test_set = split_train_test_by_id(card_data_with_id, 0.2, "index") # 80% for Training and 20% for Testing
+
+print(len(start_train_set), "for training Data", len(start_test_set), "for testing Data")
+print("Verification of total instances in Data set: ",len(start_train_set)+len(start_test_set))
+
+# Create train/test indices to split data in train/test sets
+kfold = StratifiedKFold(n_splits=5, shuffle=True, random_state=seed)
+
+
+# Define a model generator
+def generate_model():
+    _model = Sequential()
+    _model.add(Dense(22, input_dim=28))
+    _model.add(SReLU())
+    _model.add(Dropout(0.2))
+    _model.add(Dense(1, activation='sigmoid'))
+    _model.compile(loss='binary_crossentropy', optimizer='adam')
+    return _model
