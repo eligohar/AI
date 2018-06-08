@@ -158,3 +158,29 @@ def generate_model():
     _model.add(Dense(1, activation='sigmoid'))
     _model.compile(loss='binary_crossentropy', optimizer='adam')
     return _model
+
+    # Define callbacks
+baselogger = BaseLogger()
+earlystop = EarlyStopping(monitor='val_loss', min_delta=1e-4, patience=5, verbose=0, mode='auto')
+reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=5, min_lr=0.001)
+tensor_board = TensorBoard(log_dir='./logs', histogram_freq=0, write_graph=True, write_images=False)
+
+
+# Storage
+k = 0
+predictions = np.empty([len(Y), kfold.n_splits])
+for train, test in kfold.split(X, Y):
+    # Define model
+    model = generate_model()
+    # Fit the model
+    history = model.fit(X[train], Y[train],
+                        batch_size=1200,
+                        epochs=100,
+                        verbose=0,
+                        shuffle=True,
+                        validation_data=(X[test], Y[test]),
+                        class_weight=class_weights,
+                        callbacks=[baselogger, earlystop, reduce_lr, tensor_board])
+    # Store the predicted probabilities and iterate k
+    predictions[train, k] = model.predict_proba(X[train]).flatten()
+    k += 1
