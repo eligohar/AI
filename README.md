@@ -18,6 +18,9 @@ The models are implemented in Python using Keras and TensorFlow as the backend
 
 # Performance
 
+![picture alt](./figures/Transition_amount_vs_class_type.png "Title is optional")
+![picture alt](./figures/credit_card_fields.png "Title is optional")
 ![picture alt](./figures/ROC.png "Title is optional")
+![picture alt](./figures/precision-recall.png "Title is optional")
 
 [Contribution guidelines for this project](figures/CONTRIBUTING.md)
