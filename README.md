@@ -15,6 +15,9 @@ The models are fit using batches of 1200 observations for up to 100 epochs, alth
 
 The models are implemented in Python using Keras and TensorFlow as the backend
 
+
+# Performance
+
 ![picture alt](./figures/ROC.png "Title is optional")
 
 [Contribution guidelines for this project](figures/CONTRIBUTING.md)
