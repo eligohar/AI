@@ -6,11 +6,16 @@ We selected the dataset for *“Credit Card Fraud Detection System”* from a we
 # Model:
 *	The data is split into 5 train/test sets
 *	For each split, a multi-layer perceptron (MLP) neural network is used having following characteristics:
-   * 28 input nodes
-   * 22 nodes for densely connected hidden layer having
-    *	S-shaped rectified linear activation and 20% dropout
+          * 28 input nodes
+          * 22 nodes for densely connected hidden layer having
+                  *	S-shaped rectified linear activation and 20% dropout
 *	1 output node with a sigmoid activation.
 
 The models are fit using batches of 1200 observations for up to 100 epochs, although validation loss (binary cross entropy) is monitored to permit early stopping.
 
 The models are implemented in Python using Keras and TensorFlow as the backend
+
+* Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
