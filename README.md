@@ -18,9 +18,10 @@ The models are implemented in Python using Keras and TensorFlow as the backend
 
 
 # Data Set Analysis
+## Authentic vs Fradulent Cases 
 The first graph shown is between Transition Amount and Class Type. Class Type indicates whether the transition amount is authentic i.e.0 or fradulent i.e.1. It is clear that class type 1 transition amount ranging from 0 to 5000 have most fradulet cases.
 
-On the other hand, few number of the ‘Class Type 1’ instances has less amount of the transition amount, which is shown in this figure. We observed that if the transition amount is huge, it does not mean that the transition is not a Fake or Fraudulent transition.
+
 ![picture alt](./figures/Transition_amount_vs_class_type.png "Title is optional")
 ![picture alt](./figures/credit_card_fields.png "Title is optional")
 # Performance
