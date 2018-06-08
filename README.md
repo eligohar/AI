@@ -24,9 +24,7 @@ The first graph shows plot between Transition Amount and Class Type. It is clear
 ![picture alt](./figures/Transition_amount_vs_class_type.png "Title is optional")
 
 ## Input Features Visualized 
- This figure represents the histogram of all numerical attributes in the Credit Card Data set.
- It contains 31 sub-plots, including for 'Class Type', 'Elapsed Time', and ‘Transition Amount' with the V1 to V28 features
- Each sub-plot, y-axis describes the total number of instances occurred and x –axis shows value of the particular field in the Dataset.
+Following histograms represent the frequency of occurance of a particular feature vlaue and contains 31 sub-plots for Class Type,  Elapsed Time, Transition Amount features from  V1 to V28. In each sub-plot, y-axis describes the total number of instances occurred and x –axis shows value of the particular field in the Dataset.
  Class Type 0’ or Negative Class means real transition and ‘Class Type 1’ or Positive Class means fraudulent transition.
  From left to right, in first row, first subplot represents the histogram data of ‘Class Type’ field. We can clearly understand from this sub-plot that there are more number of instances of ‘Class Type 0’, showed by peak, than the number of instances of ‘Class Type 1’
  Second subplot displays Elapsed Time histogram information of all instances of data set. Most of the instances have higher Elapsed Time, shown in the Figure.
