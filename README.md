@@ -22,7 +22,7 @@ The models are implemented in Python using Keras and TensorFlow as the backend
 ![picture alt](./figures/credit_card_fields.png "Title is optional")
 # Performance
 The final model achieves an overall f1 score of 1.00, with 95% sensitivity (recall) and 19% precision for the positive class. That is, the model correctly identifies 95% of the fraud cases (true positives) but only 19% of the transactions predicted as fraudulent were actually fraudulent. The model catches 95% of the fraudulent cases — it could identify more cases of fraud but would then also have lower precision.
-
+# classification Report
 
 ## ROC
 ![picture alt](./figures/ROC.png "Title is optional")
