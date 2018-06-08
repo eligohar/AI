@@ -23,7 +23,7 @@ Data set contains 31 number of input features as nemerical value. Thses fetures 
 The first graph shows plot between Transition Amount and Class Type. It is clear that the Class Type 1 transition amount ranging between 0 to 5000 has the most fradulet cases.
 ![picture alt](./figures/Transition_amount_vs_class_type.png "Title is optional")
 
-
+## Input Features Visualized 
 ![picture alt](./figures/credit_card_fields.png "Title is optional")
 # Performance
 The final model achieves an overall f1 score of 1.00, with 95% sensitivity (recall) and 19% precision for the positive class. That is, the model correctly identifies 95% of the fraud cases (true positives) but only 19% of the transactions predicted as fraudulent were actually fraudulent. The model catches 95% of the fraudulent cases — it could identify more cases of fraud but would then also have lower precision.
