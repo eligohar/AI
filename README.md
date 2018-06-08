@@ -25,6 +25,14 @@ The first graph shows plot between Transition Amount and Class Type. It is clear
 
 ## Input Features Visualized 
 ![picture alt](./figures/credit_card_fields.png "Title is optional")
+  This figure represents the histogram of all numerical attributes in the Credit Card Data set.
+•    It contains 31 sub-plots, including for 'Class Type', 'Elapsed Time', and ‘Transition Amount' with the V1 to V28 features
+•    Each sub-plot, y-axis describes the total number of instances occurred and x –axis shows value of the particular field in the Dataset.
+•    ‘Class Type 0’ or Negative Class means real transition and ‘Class Type 1’ or Positive Class means fraudulent transition.
+•    From left to right, in first row, first subplot represents the histogram data of ‘Class Type’ field. We can clearly understand from this sub-plot that there are more number of instances of ‘Class Type 0’, showed by peak, than the number of instances of ‘Class Type 1’
+•    Second subplot displays Elapsed Time histogram information of all instances of data set. Most of the instances have higher Elapsed Time, shown in the Figure.
+•    Third subplot shows that more number of instances have very few transition amount and meanwhile, there are some instances in Dataset which have somehow higher transition amount.
+•    Going onward, sub-plots for V1 to V28 fields, reveals their normal distribution data across particular negative and positive values.
 # Performance
 The final model achieves an overall f1 score of 1.00, with 95% sensitivity (recall) and 19% precision for the positive class. That is, the model correctly identifies 95% of the fraud cases (true positives) but only 19% of the transactions predicted as fraudulent were actually fraudulent. The model catches 95% of the fraudulent cases — it could identify more cases of fraud but would then also have lower precision.
 # classification Report
