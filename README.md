@@ -16,10 +16,11 @@ The models are fit using batches of 1200 observations for up to 100 epochs, alth
 The models are implemented in Python using Keras and TensorFlow as the backend
 
 
-# Performance
 
+# Data Set Analysis
 ![picture alt](./figures/Transition_amount_vs_class_type.png "Title is optional")
 ![picture alt](./figures/credit_card_fields.png "Title is optional")
+# Performance
 ![picture alt](./figures/ROC.png "Title is optional")
 ![picture alt](./figures/precision-recall.png "Title is optional")
 
