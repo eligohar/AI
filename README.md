@@ -15,7 +15,7 @@ The models are fit using batches of 1200 observations for up to 100 epochs, alth
 
 The models are implemented in Python using Keras and TensorFlow as the backend
 
-* Bullet list
+Markup : * Bullet list
               * Nested bullet
                   * Sub-nested bullet etc
           * Bullet list item 2
