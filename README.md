@@ -34,9 +34,12 @@ Sub-plots for feature V1 to V28, reveals the normal distribution of each feature
 # Performance
 The final model achieves an overall f1 score of 1.00, with 95% sensitivity (recall) and 19% precision for the positive class. That is, the model correctly identifies 95% of the fraud cases (true positives) but only 19% of the transactions predicted as fraudulent were actually fraudulent. The model catches 95% of the fraudulent cases — it could identify more cases of fraud but would then also have lower precision.
 ![picture alt](./figures/Untitled.png "Title is optional")
-# classification Report
+# Classification Report
 
 
+## Precision Recall Curve
+For setting the threshold value, we can simply select the threshold value that gives us the best precision/recall tradeoff. But for selecting a good and appropriate precision/recall tradeoff we plot precision directly against recall, which is shown in the Figure.
+![picture alt](./figures/precision-recall.png "Title is optional")
 
 ## Receiver Operating Characteristic (ROC)
 The ROC curve, in the Figure is another common tool used with binary classifiers. It is similar to the precision/recall curve, but instead of plotting precision versus recall, the ROC curve plots the true positive rate against the false positive rate. There is a tradeoff: the higher the recall (TPR), the more false positives (FPR) the classifier produces. The red dotted line represents the ROC curve of a purely random classifier; a good classifier stays as far away from that line as possible (toward the top-left corner) Hence, ROC curve shows that our classifier gives true positive rate value or Accuracy of approximately 97%.
@@ -45,7 +48,5 @@ The ROC curve, in the Figure is another common tool used with binary classifiers
 
 
 
-## Precision Recall Curve
-![picture alt](./figures/precision-recall.png "Title is optional")
 
 [Contribution guidelines for this project](figures/CONTRIBUTING.md)
