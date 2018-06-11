@@ -28,7 +28,7 @@ Following figure represent the frequency of occurance of a particular feature vl
 From left to right, in first row, first subplot represents the histogram data of ‘Class Type’ field. We can clearly understand from this sub-plot that there are more number of instances of ‘Class Type 0’, showed by peak, than the number of instances of ‘Class Type 1’.
 Second subplot displays Elapsed Time histogram information of all instances of data set. Most of the instances have higher Elapsed Time.
 Third subplot shows that more number of instances have very few transition amount and meanwhile, there are some instances in Dataset which have somehow higher transition amount.
-Going onward, sub-plots for V1 to V28 fields, reveals the normal distribution data across the range of negative and positive values.
+Sub-plots for feature V1 to V28, reveals the normal distribution of each feature across the range of negative and positive values. This indicates that our input features are dsitributed normally.
 ![picture alt](./figures/credit_card_fields.png "Title is optional")
  
 # Performance
