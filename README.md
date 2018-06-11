@@ -17,7 +17,7 @@ The models are implemented in Python using Keras and TensorFlow as the backend
 
 
 
-# Data Set Analysis
+# Raw Data Set Analysis
 Data set contains 31 number of input features as nemerical value. Thses fetures include Elapsed Time, Transition Amount, Class Type and features from V1 to V28. The features from V1 to V28 are the principal component obtained with PCA. Moreover, Class Type indicates whether the transition is authentic i.e. "0" or fradulent i.e. "1" and Transaction Amount shows the monetrery value of transcation performed. The data set contains a list of 284,807 transactions of which 0.172 percent are fraudulent. Our system utilizes  28 numerical input features i.e. V1 to V28, as input and outputs based on prediction wether transition is is authentic or fradulent.
 ## Authentic vs Fradulent Cases 
 The first graph shows plot between Transition Amount and Class Type. It is clear that the Class Type 1 transition amount ranging between 0 to 5000 has the most fradulet cases.
