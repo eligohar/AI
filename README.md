@@ -31,8 +31,10 @@ Third subplot shows that more number of instances have very few transition amoun
 Sub-plots for feature V1 to V28, reveals the normal distribution of each feature across the range of negative and positive values. This indicates that our input features are dsitributed normally.
 ![picture alt](./figures/credit_card_fields.png "Title is optional")
  
-# Performance
-The final model achieves an overall f1 score of 1.00, with 95% sensitivity (recall) and 19% precision for the positive class. That is, the model correctly identifies 95% of the fraud cases (true positives) but only 19% of the transactions predicted as fraudulent were actually fraudulent. The model catches 95% of the fraudulent cases — it could identify more cases of fraud but would then also have lower precision.
+# Performance Evaluation
+We use Confusion Matrix to evaluate the performance of a classifier. The general idea of Confusion Matrix is to count the number of times instances of class A are classified as class B. Each row in a confusion matrix represents an actual class, while each column represents a predicted class. Moreover, the first row of this matrix considers the negative class while the second row considers the positive class. So, it also gives the information about the True Negatives, False Positives, False Negatives, and True Positive. Hence, confusion matrix is used to compute the performance evaluation metrics, i.e., Precision, Recall, F1-score, True positive Rate and False Positive Rate. Generally, precision is the accuracy of the positive predictions, recall/sensitivity or true positive rate (TPR). TPR is the ratio of positive instances that are correctly detected while False Positive Rate (FPR) is the ratio of negative instances that are incorrectly classified as positive. Consequently, F1-score is the harmonic mean of precision and recall.
+
+The final model achieves an overall F1-score of 1.00, with 96% sensitivity and 19% precision for the positive class. That is, the model correctly identifies 96% of the fraud cases (true positives) but only 19% of the transactions predicted as fraudulent were actually fraudulent. The model catches 96% of the fraudulent cases — it could identify more cases of fraud but would then also have lower precision.
 ![picture alt](./figures/Untitled.png "Title is optional")
 
 ## Precision Recall Curve
