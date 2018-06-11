@@ -44,4 +44,8 @@ For setting the threshold value, we can simply select the threshold value that g
 The ROC curve is another common tool used with binary classifiers. It is similar to the precision/recall curve, but instead of plotting precision versus recall, the ROC curve plots the true positive rate against the false positive rate. There is a tradeoff: the higher the recall (TPR), the more false positives (FPR) the classifier produces. The red dotted line represents the ROC curve of a purely random classifier; a good classifier stays as far away from that line as possible (toward the top-left corner) Hence, ROC curve shows that our classifier gives true positive rate value or Accuracy of approximately 96%.
 ![picture alt](./figures/ROC.png "Title is optional")
 
+# Comaparing ROC Curves of Two Binary Classifiers 
+Here we comaper the Stochastic Gradient Descent (SGD), ROC curves and Area Under Curve (AUC), with Randomforest classifier (RFC). We did this to identify which binary classifier performs better on the given data set. we can see that the area under the curve for both classifiers is approximately similar. Hence, both binary classifiers perform almost identical as AUC of SGD is 0.9399 and 0.9234 for RFC. 
+![picture alt](./figures/sdsd.jpg "Title is optional")
+
 [Contribution guidelines for this project](figures/CONTRIBUTING.md)
